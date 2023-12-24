@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bground{
+        height: 285px;
+        width: 340px; 
+        /* display:flex;
+        justify-content:center;
+        align-items: center;
+      height: 100vh; */
+      padding: 50px;
+     
+       background: linear-gradient(#83a0cc,#5e6944,#d698bf);
+    }
+   
+    body{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+      height: 100vh;
+    }
+    #enter{
+        height: 50px;
+        width: 155px;
+        font-size: 20px;
+        background-color:rgb(167, 209, 224);
+    }
+    
+    .btn{
+        height: 40px;
+        width: 60px;
+        margin: 10px;
+        background: linear-gradient(#32a852,#484d49);
+        color: white;
+        font-size: 20px;
+    }
+     
+    #clear{
+        height: 53px;
+        width: 155px;
+        background-color: #6d3c7a;
+        font-size: 20px;
+        font-family:monospace;
+    }
+</style>
+<body>
+    
+    <div id="bground">
+         <input type="text" id="enter">
+         <input type="submit" value="AC" id="clear" onclick="Clear()">
+<br/>
+<input type="submit" value="9" id="nine" class="btn" onclick="addnum('9')">
+<input type="submit" value="8" id="eight" class="btn" onclick="addnum('8')">
+<input type="submit" value="7" id="seven" class="btn" onclick="addnum('7')">
+<input type="submit" value="-" id="minus" class="btn" onclick="addnum('-')">
+<br/>
+<input type="submit" value="6" id="six" class="btn" onclick="addnum('6')">
+<input type="submit" value="5" id="five" class="btn" onclick="addnum('5')">
+<input type="submit" value="4" id="four" class="btn" onclick="addnum('4')">
+<input type="submit" value="+" id="plus" class="btn" onclick="addnum('+')">
+<br/>
+<input type="submit" value="3" id="three" class="btn" onclick="addnum('3')">
+<input type="submit" value="2" id="two" class="btn" onclick="addnum('2')">
+<input type="submit" value="1" id="one" class="btn" onclick="addnum('1')">
+<input type="submit" value="*" id="mul" class="btn" onclick="addnum('*')">
+<br/>
+<input type="submit" value="0" id="zero" class="btn" onclick="addnum('0')">
+<input type="submit" value="." id="point" class="btn" onclick="addnum('.')">
+<input type="submit" value="=" id="equals" class="btn" onclick="Calculate()">
+<input type="submit" value="/" id="div" class="btn" onclick="addnum('/')">
+<br/>
+
+    </div>
+
+</body>
+<script>
+   function addnum(value)
+   {
+document.getElementById('enter').value+=value;
+   }
+   function Calculate()
+   {
+    document.getElementById('enter').value=eval(document.getElementById('enter').value)
+   }
+   function Clear()
+   {
+    document.getElementById('enter').value="";
+   }
+</script>
+</html>
